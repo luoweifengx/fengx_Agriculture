@@ -82,3 +82,9 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+runClient {
+    // 默认使用Fabric的runClient配置
+    // 如果需要开启远程调试，则添加JVM参数：
+    jvmArgs "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+}
