@@ -1,11 +1,9 @@
 package luowei.fengxagriculture;
 
-//import luowei.fengxagriculture.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import luowei.fengxagriculture.registry.ModItemGroup;
 import luowei.fengxagriculture.registry.ModItems;
 
 public class FengxAgriculture implements ModInitializer {
@@ -23,6 +21,8 @@ public class FengxAgriculture implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModItemGroup.initialize();
+		LOGGER.info("Mod item group initialized.");
 		ModItems.initialize();
 		LOGGER.info("Mod items initialized.");
 	}
