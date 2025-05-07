@@ -1,4 +1,8 @@
 {
-  "itemGroup.fabric_docs_reference": "自定义物品组",
-  "item.fengx-agriculture.example_item": "示例物品"
+  "itemGroup.fengx-agriculture.item_group": "Fengx的农业",
+  "item.fengx-agriculture.example_item": "示例物品",
+  "chinese_cabbage": "中国卷心菜",
+  "chinese_cabbage_seed": "中国卷心菜种子",
+  "chili_pepper": "辣椒",
+  "chili_pepper_seed": "辣椒种子"
 }

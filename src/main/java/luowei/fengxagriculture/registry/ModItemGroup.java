@@ -11,17 +11,17 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-  public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(FengxAgriculture.MOD_ID+":"+ "item_group"));
-  public static final ItemGroup CUSTOM_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,CUSTOM_ITEM_GROUP_KEY,
-  FabricItemGroup.builder()
-          .displayName(Text.translatable("itemGroup.fengxagriculture"))
-          .icon(() -> new ItemStack(ModItems.EXAMPLE_ITEM)) // 设置图标为一个物品的堆栈
-          .entries((displayContext, entries) -> {
+    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(FengxAgriculture.MOD_ID+":"+ "item_group"));
+    public static final ItemGroup CUSTOM_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,CUSTOM_ITEM_GROUP_KEY,
+    FabricItemGroup.builder()
+        .displayName(Text.translatable("itemGroup.fengxagriculture.item_group")) // 设置显示名称
+        .icon(() -> new ItemStack(ModItems.EXAMPLE_ITEM)) // 设置图标为一个物品的堆栈
+        .entries((displayContext, entries) -> {
             entries.add(ModItems.EXAMPLE_ITEM);
             entries.add(ModItems.CHINECE_CABBAGE);
             entries.add(ModItems.CHINECE_CABBAGE_SEED);
         })
-          .build());
+        .build());
     // 创建并构建一个自定义物品组，包含图标和显示名称的配置。  
     public static void initialize() {
     }
