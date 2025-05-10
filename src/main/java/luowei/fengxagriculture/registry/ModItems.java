@@ -78,10 +78,18 @@ public class ModItems {
 		new Item.Settings().food(SPICY_AND_SOUR_CHINECE_CABBAGE_COMPONENT, SPICY_AND_SOUR_CHINECE_CABBAGE_CONSUMABLE_COMPONENT)
     );
     public static void initialize() {
+        //堆肥
         CompostingChanceRegistry.INSTANCE.add(CHINECE_CABBAGE, 0.3f);
+
+        //eg
+        CompostingChanceRegistry.INSTANCE.add(EXAMPLE_ITEM, 0.3f);
+        //燃烧
         FuelRegistryEvents.BUILD.register((builder,displayContext) -> {
             builder.add(CHINECE_CABBAGE, 200);
             builder.add(CHILI_PEPPER, 200);
+            
+            //eg
+            builder.add(EXAMPLE_ITEM, 200);
         });
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register((itemGroup) -> {
             itemGroup.add(ModItems.EXAMPLE_ITEM);
