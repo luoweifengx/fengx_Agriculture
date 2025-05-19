@@ -73,7 +73,7 @@ public class ModItems {
         .saturationModifier(0.3f)
 		.build();
     public static final Item SPICY_AND_SOUR_CHINECE_CABBAGE = ModItems.register(
-		"poisonous_apple",
+		"spicy_and_sour_chinese_cabbage",
 		Item::new,
 		new Item.Settings().food(SPICY_AND_SOUR_CHINECE_CABBAGE_COMPONENT, SPICY_AND_SOUR_CHINECE_CABBAGE_CONSUMABLE_COMPONENT)
     );
@@ -87,7 +87,7 @@ public class ModItems {
         FuelRegistryEvents.BUILD.register((builder,displayContext) -> {
             builder.add(CHINECE_CABBAGE, 200);
             builder.add(CHILI_PEPPER, 200);
-            
+
             //eg
             builder.add(EXAMPLE_ITEM, 200);
         });
